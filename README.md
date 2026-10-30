@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Natasha — shadcn/ui dashboard template
 
-## Getting Started
+A free, dark e-commerce admin template built with [shadcn/ui](https://ui.shadcn.com), Next.js (App Router), Tailwind CSS v4, Recharts and [Lucide](https://lucide.dev) icons. It ships as a **shadcn registry**, so you can install the whole template into your own project with one command.
 
-First, run the development server:
+**Pages:** Dashboard · Sales (list + detail) · Products (catalog, detail, new product form) · Insights (earnings, traffic, conversions) · Marketing · Payouts · Inbox · Extensions · Help center · Settings · Go premium
+
+## Install with the shadcn CLI
+
+Requirements:
+
+- A Next.js App Router project with Tailwind CSS v4.
+- shadcn/ui initialised in that project (`npx shadcn@latest init`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx shadcn@latest add https://<your-domain>/r/natasha-theme.json https://<your-domain>/r/natasha-dashboard.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install both items in the same command:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **`natasha-theme`** (`registry:theme`) replaces your CSS variables with the Natasha tokens.
+- **`natasha-dashboard`** (`registry:block`) adds the following, then opens `/dashboard`:
+  - the pages under `app/dashboard`
+  - the components under `components/natasha`
+  - the data helpers under `lib/natasha`
+  - the CSS utilities
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The block also ships restyled versions of 18 shadcn primitives in `components/ui`:
 
-## Learn More
+- alert-dialog, badge, button, card, chart, checkbox
+- collapsible, dropdown-menu, input, popover, progress, radio-group
+- select, sheet, sonner, table, textarea, tooltip
 
-To learn more about Next.js, take a look at the following resources:
+If you already have any of these, the CLI asks before overwriting them.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To keep a short alias, add the registry to your `components.json`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+{
+  "registries": {
+    "@natasha": "https://<your-domain>/r/{name}.json"
+  }
+}
+```
 
-## Deploy on Vercel
+```bash
+npx shadcn@latest add @natasha/natasha-theme @natasha/natasha-dashboard
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design system
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Everything in the app is built from the tokens in [src/app/globals.css](src/app/globals.css). No one-off values are used.
+
+| Scale    | Values                                                                          |
+| -------- | ------------------------------------------------------------------------------- |
+| Spacing  | 4px grid with a 2px half-step: 2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 |
+| Controls | 32 (sm) · 40 (md) · 44 (lg, header actions) · 48 (xl, inputs and navigation)    |
+| Radius   | 4 · 6 · 8 · 12 · 16 · 20 · 24 (cards) · 32                                      |
+| Surfaces | background → card (panels, sidebar) → secondary (controls, tiles) → popover     |
+
+**Type** — use the `type-*` utilities instead of raw font sizes:
+
+| Utility | Size / line height |
+| --- | --- |
+| `type-display` | 40/48 |
+| `type-headline` | 32/40 |
+| `type-title-lg` | 24/32 |
+| `type-title` | 18/24 |
+| `type-body-lg` | 16/24 |
+| `type-body` | 14/20 |
+| `type-caption` | 12/16 |
+| `type-overline` | 12/16, uppercase |
+| `type-micro` | 10/12, uppercase |
+| `type-metric-xl` … `type-metric-xs` | 48/56 … 24/32, tabular figures |
+
+**Color** — brand blues (`primary`, `primary-light`, `primary-soft`) and status colors, each with a `soft` fill and a `border` variant:
+
+- `success`
+- `warning`
+- `danger`
+- `destructive`
+
+Charts use the five-step `chart-*` ramp plus the `gradient-from` → `gradient-to` brand gradient.
+
+**Layout:**
+
+- Cards are `rounded-3xl` with 24px padding and 24px gaps.
+- The header is 92px tall.
+- The sidebar is 336px expanded and 104px collapsed, and the collapsed state is remembered in a cookie.
+
+## Project structure
+
+```
+src/app/dashboard/        Routes (each page is a server component)
+src/components/natasha/   App shell, page kit, tables, forms, inbox
+src/components/natasha/charts/
+                          Recharts wrappers + custom SVG charts (bubble, heatmap, funnel, map)
+src/components/ui/        Restyled shadcn primitives
+src/lib/natasha/          Mock data, analytics series, formatters
+scripts/build-registry.mjs
+                          Generates registry.json from the source
+```
+
+All data comes from `src/lib/natasha/data.ts` and `analytics.ts`, so replace those with your API calls. Dates are formatted in UTC, so server and client render the same markup.
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000/dashboard](http://localhost:3000/dashboard).
+
+### Rebuilding the registry
+
+`registry.json` is generated from the source, so it never drifts from the app:
+
+- Tokens, utilities and keyframes are read from `globals.css`.
+- Files are collected from the folders above.
+- npm dependencies are read from the imports, with versions pinned from `package.json`.
+
+```bash
+REGISTRY_HOMEPAGE=https://<your-domain> npm run registry:build
+```
+
+This writes `registry.json` and `public/r/*.json`. Commit both, then deploy. Each item is served from `/r/<name>.json`.
+
+### Listing it in the shadcn registry directory
+
+1. Deploy the app (for example, on Vercel) and check that `https://<your-domain>/r/registry.json` loads.
+2. Set `homepage` in `package.json` to that domain, rebuild the registry, and redeploy.
+3. Follow the [Registry Directory](https://ui.shadcn.com/docs/directory) instructions to submit `@natasha` with a pull request to [shadcn-ui/ui](https://github.com/shadcn-ui/ui).
+
+## Credits
+
+- [shadcn/ui](https://ui.shadcn.com) and [Radix UI](https://www.radix-ui.com) — MIT
+- [Lucide](https://lucide.dev) icons — ISC
+- [Simple Icons](https://simpleicons.org) brand logos — CC0 1.0
+- [DiceBear Micah](https://www.dicebear.com/styles/micah/) avatars by Micah Lanier — CC BY 4.0
+- [world-atlas](https://github.com/topojson/world-atlas) map data (Natural Earth) — public domain
