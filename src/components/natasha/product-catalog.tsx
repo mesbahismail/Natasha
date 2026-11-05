@@ -211,6 +211,7 @@ function ProductTile({ product }: { product: Product }) {
       >
         <ProductImage
           product={product}
+          sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
           className="w-full rounded-2xl transition-transform duration-300 group-hover/tile:scale-[1.03]"
         />
         <span className="absolute bottom-4 left-4 flex h-8 items-center gap-2 rounded-lg border border-white/10 bg-black/60 px-2 type-body-lg font-semibold text-white backdrop-blur-md">
@@ -238,7 +239,7 @@ function ProductTile({ product }: { product: Product }) {
         <ProductMenu
           product={product}
           trigger={
-            <Button variant="ghost" size="icon-sm" aria-label={`Actions for ${product.name}`} className="text-muted-foreground">
+            <Button variant="secondary" size="icon-lg" aria-label={`Actions for ${product.name}`}>
               <Ellipsis />
             </Button>
           }

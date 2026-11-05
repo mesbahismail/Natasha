@@ -73,6 +73,10 @@ export function DateRangePicker({
     setFrom(range.from)
     setTo(range.to)
     setHover(null)
+    setPreset(presets.find((item) => {
+      const candidate = item.range(today)
+      return isSameDay(candidate.from, range.from) && isSameDay(candidate.to, range.to)
+    })?.id ?? null)
     // Bring the selected month into view once the popover has rendered.
     requestAnimationFrame(() => {
       const el = scrollRef.current?.querySelector<HTMLElement>(`[data-month="${format(range.from, "yyyy-MM")}"]`)
@@ -114,31 +118,27 @@ export function DateRangePicker({
         align="end"
         sideOffset={12}
         collisionPadding={16}
-        className="relative w-[min(680px,calc(100vw-32px))] gap-0 overflow-hidden rounded-3xl bg-popover/85 p-0 backdrop-blur-2xl"
+        aria-label="Pick a date range"
+        className="relative h-[min(760px,var(--radix-popover-content-available-height))] max-h-[calc(100dvh-32px)] w-[min(680px,calc(100vw-32px))] gap-0 overflow-hidden rounded-4xl border border-white/10 bg-popover/95 p-0 shadow-2xl shadow-black/40 backdrop-blur-2xl backdrop-saturate-125 supports-[backdrop-filter]:bg-popover/65"
       >
-        {/* Ambient glow */}
-        <span aria-hidden className="pointer-events-none absolute -top-16 left-24 size-64 rounded-full bg-chart-2/12 blur-3xl" />
-        <span aria-hidden className="pointer-events-none absolute right-8 bottom-24 size-72 rounded-full bg-chart-4/14 blur-3xl" />
-        <span aria-hidden className="pointer-events-none absolute bottom-0 -left-10 size-56 rounded-full bg-chart-1/8 blur-3xl" />
-
-        <div className="relative border-b border-border px-6 py-6">
+        <div className="relative shrink-0 border-b border-white/10 px-5 py-6 sm:px-8 sm:py-7">
           <p className="type-title-lg">Pick a Date</p>
-          <div className="mt-6 grid grid-cols-2">
-            <div className="pr-6">
+          <div className="mt-6 grid grid-cols-2 sm:grid-cols-[216px_1fr]">
+            <div className="pr-4 sm:pr-6">
               <p className="type-overline text-muted-foreground">From</p>
-              <p className="mt-2 type-title-lg tabular-nums">{format(from, "MMM d, yyyy")}</p>
+              <p className="mt-2 type-title tabular-nums sm:type-title-lg">{format(from, "MMM d, yyyy")}</p>
             </div>
-            <div className="border-l border-border pl-6">
+            <div className="border-l border-white/10 pl-4 sm:pl-5">
               <p className="type-overline text-muted-foreground">To</p>
-              <p className={cn("mt-2 type-title-lg tabular-nums", !end && "text-subtle-foreground")}>
+              <p className={cn("mt-2 type-title tabular-nums sm:type-title-lg", !end && "text-subtle-foreground")}>
                 {end ? format(end, "MMM d, yyyy") : "Select end"}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="relative grid grid-cols-1 sm:grid-cols-[208px_1fr]">
-          <div className="flex gap-1 overflow-x-auto border-b border-border p-4 sm:flex-col sm:border-r sm:border-b-0 sm:p-4 sm:pt-6">
+        <div className="relative grid min-h-0 flex-1 grid-cols-1 grid-rows-[auto_minmax(0,1fr)] sm:grid-cols-[248px_1fr] sm:grid-rows-[minmax(0,1fr)] sm:py-8">
+          <div className="no-scrollbar flex gap-2 overflow-auto border-b border-white/10 p-3 sm:flex-col sm:border-r sm:border-b-0 sm:px-6 sm:py-0">
             {presets.map((item) => {
               const active = preset === item.id
               return (
@@ -151,13 +151,14 @@ export function DateRangePicker({
                     setFrom(range.from)
                     setTo(range.to)
                     const el = scrollRef.current?.querySelector<HTMLElement>(`[data-month="${format(range.from, "yyyy-MM")}"]`)
-                    el?.scrollIntoView({ block: "start", behavior: "smooth" })
+                    if (el && scrollRef.current) scrollRef.current.scrollTo({ top: el.offsetTop, behavior: "smooth" })
                   }}
+                  aria-pressed={active}
                   className={cn(
                     "h-11 shrink-0 rounded-lg border px-4 text-left type-body-lg whitespace-nowrap transition-colors outline-none focus-visible:ring-3 focus-visible:ring-ring/40",
                     active
-                      ? "border-primary-border bg-primary text-primary-foreground"
-                      : "border-transparent text-muted-foreground hover:bg-secondary hover:text-foreground"
+                      ? "border-primary-border bg-primary text-primary-foreground shadow-sm inset-shadow-xs inset-shadow-white/20"
+                      : "border-transparent text-muted-foreground hover:bg-white/5 hover:text-foreground"
                   )}
                 >
                   {item.label}
@@ -168,7 +169,7 @@ export function DateRangePicker({
 
           <div
             ref={scrollRef}
-            className="no-scrollbar relative h-[440px] overflow-y-auto scroll-fade-y px-4 pb-24 sm:px-6"
+            className="no-scrollbar relative min-h-0 overflow-y-auto overscroll-contain scroll-fade-b px-4 pb-24 sm:px-5"
             onMouseLeave={() => setHover(null)}
           >
             {months.map((month) => (
@@ -186,7 +187,7 @@ export function DateRangePicker({
           <Button
             size="xl"
             disabled={!to}
-            className="absolute right-6 bottom-6 shadow-xl shadow-black/40"
+            className="absolute right-5 bottom-5 rounded-2xl shadow-xl shadow-black/40 inset-shadow-xs inset-shadow-white/20 sm:right-7 sm:bottom-7"
             onClick={() => {
               if (!to) return
               onApply({ from, to })
@@ -220,21 +221,21 @@ function Month({
   })
 
   return (
-    <section data-month={format(month, "yyyy-MM")} aria-label={format(month, "MMMM yyyy")} className="pt-6">
-      <h3 className="text-center type-headline">
+    <section data-month={format(month, "yyyy-MM")} aria-label={format(month, "MMMM yyyy")} className="pt-6 sm:pt-0 sm:not-first:pt-10">
+      <h3 className="text-center type-headline sm:type-display">
         {format(month, "MMMM")}
         {month.getFullYear() !== new Date().getFullYear() && (
           <span className="ml-2 text-subtle-foreground">{format(month, "yyyy")}</span>
         )}
       </h3>
-      <div className="mt-4 grid grid-cols-7 border-b border-border pb-3">
+      <div className="mt-6 grid grid-cols-7 border-b border-white/10 pb-6">
         {WEEKDAYS.map((d, i) => (
           <span key={i} className="text-center type-body text-muted-foreground">
             {d}
           </span>
         ))}
       </div>
-      <div role="grid" className="mt-4 grid grid-cols-7 gap-y-2">
+      <div role="group" aria-label={format(month, "MMMM yyyy")} className="mt-6 grid grid-cols-7 gap-y-1">
         {days.map((day) => {
           const outside = !isSameMonth(day, month)
           if (outside) {

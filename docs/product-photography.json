@@ -1,0 +1,174 @@
+{
+  "tool": "Built-in image_gen",
+  "artDirection": "Photorealistic studio flat lays with warm stone backgrounds, soft upper-left lighting, natural fabric texture, no branding.",
+  "assets": [
+    {
+      "id": "1",
+      "name": "Floral Print Blouse",
+      "file": "public/products/product-1.webp",
+      "prompt": "Use case: product-mockup. Create a single square premium ecommerce catalog photograph, 1024x1024. Subject: a real women's ivory long sleeve blouse with delicate small terracotta orange floral print, gently gathered cuffs and button front. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine woven cotton texture, seams, buttons, organic fabric folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above, sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "2",
+      "name": "Elegant Silk Blouse",
+      "file": "public/products/product-2.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's champagne ivory silk button-front blouse, long sleeves, soft collar, subtly lustrous silk with natural folds. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "3",
+      "name": "Casual Denim Shirt",
+      "file": "public/products/product-3.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's washed medium blue denim shirt, long sleeves, classic collar, two chest pockets, pale contrast stitching, metal snaps. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "4",
+      "name": "Polka Dot Tunic",
+      "file": "public/products/product-4.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's black long sleeve tunic blouse with small evenly spaced white polka dots, soft round neckline. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "5",
+      "name": "Striped Summer Top",
+      "file": "public/products/product-5.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's sleeveless cream cotton tank top with muted coral horizontal stripes, scoop neck. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "6",
+      "name": "Chic Bohemian Shirt",
+      "file": "public/products/product-6.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's burnt terracotta bohemian blouse with fine cream paisley motifs, relaxed long sleeves and subtle gathered neckline. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "7",
+      "name": "Lace Detail Camisole",
+      "file": "public/products/product-7.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's black satin camisole with delicate black floral lace at V neckline and hem, two thin straps. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "8",
+      "name": "Graphic Tee for Women",
+      "file": "public/products/product-8.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's washed charcoal cotton crew neck T-shirt with a small muted amber abstract sun graphic on chest, graphic contains no text. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "9",
+      "name": "Striped Maxi Dress",
+      "file": "public/products/product-9.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's full length ivory and black vertically striped sleeveless maxi dress with defined waist, naturally flowing skirt. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "10",
+      "name": "Denim Jacket with Embroidery",
+      "file": "public/products/product-10.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's washed indigo denim trucker jacket with small terracotta red and cream embroidered flowers on chest, visible brass buttons. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "11",
+      "name": "Polka Dot Wrap Skirt",
+      "file": "public/products/product-11.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's black midi wrap skirt with small ivory polka dots and a side waist tie. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "12",
+      "name": "Lace-up Ankle Boots",
+      "file": "public/products/product-12.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: pair of real dark espresso leather lace-up ankle boots, black soles, small stacked heels, precise leather grain and metal eyelets, arranged in elegant three-quarter view on the studio surface. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "13",
+      "name": "Classic Crew Neck Sweater",
+      "file": "public/products/product-13.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's camel beige crew neck wool sweater, rich fine cable knit and ribbed cuffs and hem. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "14",
+      "name": "Vintage Vibe Pullover",
+      "file": "public/products/product-14.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's warm brown knit crewneck pullover with wide muted deep teal and cream horizontal bands, vintage knit texture. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "15",
+      "name": "Essential Cotton Long Sleeve",
+      "file": "public/products/product-15.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's warm ivory cotton long sleeve top with a neat round neck, visible double stitched hems. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "16",
+      "name": "Sporty Performance Jacket",
+      "file": "public/products/product-16.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's charcoal navy technical zip-front jacket with cobalt blue color block panels, lightweight matte nylon, clean sporty seams. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "17",
+      "name": "Relaxed Fit Cardigan",
+      "file": "public/products/product-17.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's oatmeal beige relaxed cardigan with V neck, five dark horn buttons, chunky knit texture, ribbed cuffs. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "18",
+      "name": "Graphic Print Tank Top",
+      "file": "public/products/product-18.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's ivory cotton tank top with a small cobalt blue abstract geometric circle graphic on chest, graphic contains no text. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "19",
+      "name": "Urban Style Hoodie",
+      "file": "public/products/product-19.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: unisex charcoal black heavyweight cotton hoodie with kangaroo pocket and tonal drawstrings, thick ribbed cuffs. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "20",
+      "name": "Eco-Friendly Cotton Hoodie",
+      "file": "public/products/product-20.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: unisex rich cobalt royal blue heavyweight organic cotton hoodie with kangaroo pocket and matching drawstrings. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "21",
+      "name": "Bold Color Block Sweatshirt",
+      "file": "public/products/product-21.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's warm sand beige crewneck sweatshirt with a bold cobalt blue horizontal color block across chest and upper sleeves. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "22",
+      "name": "Casual Crew Neck Tee",
+      "file": "public/products/product-22.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's off-white relaxed fit heavyweight cotton crew neck T-shirt, slightly dropped shoulders, visible seams and natural folds. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "23",
+      "name": "Chiffon Evening Gown",
+      "file": "public/products/product-23.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's blush peach sleeveless chiffon evening gown with a tasteful V neckline, gathered waist, flowing full-length layered skirt. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "24",
+      "name": "Classic Fit Graphic Shirt",
+      "file": "public/products/product-24.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's cream cotton crew neck T-shirt with a muted terracotta abstract sun and horizon chest graphic, no letters or text. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "25",
+      "name": "Relaxed Short Sleeve Top",
+      "file": "public/products/product-25.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: women's sand beige short sleeve cotton jersey top with gently dropped shoulders and round neckline. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "26",
+      "name": "Everyday Comfort T-Shirt",
+      "file": "public/products/product-26.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's heather mid grey cotton crew neck T-shirt with realistic marled fiber texture. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "27",
+      "name": "Stylish V-Neck Tee",
+      "file": "public/products/product-27.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's charcoal black cotton V-neck T-shirt, clean neat V neckline and realistic drape. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    },
+    {
+      "id": "28",
+      "name": "Men White T-shirt",
+      "file": "public/products/product-28.webp",
+      "prompt": "Use case: product-mockup. Asset type: single square premium ecommerce catalog photograph, 1024x1024. Subject: men's pristine white classic regular fit cotton crew neck T-shirt, fine rib collar and neat seams. Entire garment neatly arranged front-facing flat lay on a matte warm light stone taupe seamless surface (#e8e1d8). Soft large studio light from upper left, subtle natural contact shadows, realistic fine fabric texture, stitching, natural organic folds. Centered, occupies 78% of frame, all sleeves and hem fully visible with generous consistent margin. Refined minimal fashion photography to sit in a charcoal dark ecommerce dashboard. Camera directly above (boots: three-quarter product angle), sharp textile detail, natural color, realistic physical clothing, no person, no hanger, no mannequin, no props, no writing, no branding, no watermark, no collage, not illustration or CGI."
+    }
+  ]
+}

@@ -179,7 +179,7 @@ export function ExtensionsTable({ initial, pageSize = 6 }: { initial: Extension[
                     <TableCell className="h-28 px-2 text-right">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="ghost" size="icon-sm" aria-label={`Actions for ${extension.name}`} className="text-muted-foreground">
+                          <Button variant="secondary" size="icon-lg" aria-label={`Actions for ${extension.name}`}>
                             <Ellipsis />
                           </Button>
                         </DropdownMenuTrigger>

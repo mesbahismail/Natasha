@@ -38,7 +38,8 @@ export function PageHeader({
   const { setMobileOpen } = useShell()
 
   return (
-    <header className="flex h-23 shrink-0 items-center gap-4 border-b border-border-subtle md:mx-6 md:gap-6">
+    <header className="sticky top-0 z-30 -mx-4 flex h-23 shrink-0 items-center gap-4 bg-background/95 px-4 backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-background/70 md:-mx-8 md:gap-6 md:px-14">
+      <span aria-hidden className="pointer-events-none absolute inset-x-4 bottom-0 h-px bg-border-subtle md:inset-x-14" />
       <div className="flex min-w-0 flex-1 items-center gap-3">
         <Button
           variant="secondary"

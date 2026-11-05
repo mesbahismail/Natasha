@@ -37,11 +37,7 @@ const colors = [
 type GalleryItem = { id: string; name: string; image?: string; art: ProductArt }
 
 const initialGallery: GalleryItem[] = [
-  { id: "g1", name: "Front", art: { kind: "tee", color: "#fbfbfa", accent: "#e3e3e0", backdrop: "#e9e4dc" } },
-  { id: "g2", name: "Back", art: { kind: "tee", color: "#f3f3f1", accent: "#dcdcd8", backdrop: "#efe7de" } },
-  { id: "g3", name: "Model", art: { kind: "tee", color: "#fbfbfa", accent: "#d1553b", pattern: "graphic", backdrop: "#d9d2c8" } },
-  { id: "g4", name: "Flat lay", art: { kind: "tee", color: "#ffffff", accent: "#cfcfcb", backdrop: "#ece5dc" } },
-  { id: "g5", name: "Detail", art: { kind: "longsleeve", color: "#f7f7f5", accent: "#dcdcd8", backdrop: "#e8e1d8" } },
+  { id: "g1", name: "White cotton T-shirt — front", image: "/products/product-28.webp", art: { kind: "tee", color: "#fbfbfa", accent: "#e3e3e0", backdrop: "#e9e4dc" } },
 ]
 
 const initialTags = [

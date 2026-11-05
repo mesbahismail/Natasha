@@ -110,7 +110,7 @@ export function SalesTable({ rows, pageSize = 10 }: { rows: SaleRow[]; pageSize?
                 <TableCell className="px-2 text-right">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon-sm" aria-label={`Actions for sale #${row.id}`} className="text-muted-foreground">
+                      <Button variant="secondary" size="icon-lg" aria-label={`Actions for sale #${row.id}`}>
                         <Ellipsis />
                       </Button>
                     </DropdownMenuTrigger>

@@ -202,10 +202,10 @@ function NavLink({ item, active, collapsed }: { item: NavItem; active: boolean; 
       {item.badge ? (
         <span
           className={cn(
-            "grid place-items-center rounded-full border tabular-nums",
+            "grid place-items-center tabular-nums",
             collapsed
-              ? "absolute -top-0.5 right-1 size-5 border-primary-border bg-primary text-[11px] leading-none font-semibold text-primary-foreground ring-2 ring-sidebar"
-              : "h-6 min-w-8 px-2 type-caption",
+              ? "absolute -top-0.5 right-1 size-5 text-[11px] leading-none font-semibold text-primary-foreground"
+              : "h-6 min-w-8 rounded-full border px-2 type-caption",
             !collapsed && (active ? "border-white/70 bg-transparent" : "border-primary-border bg-primary text-primary-foreground")
           )}
         >

@@ -128,6 +128,7 @@ export const products: Product[] = productSeeds.map((seed, index) => {
   )
   return {
     ...seed,
+    image: `/products/product-${seed.id}.webp`,
     art: { backdrop: backdrops[index % backdrops.length], ...seed.art },
     wholesale: Math.round(seed.price * 0.55 * 100) / 100,
     sku: String(3479812 + index * 13),

@@ -97,11 +97,11 @@ export function Gauge({
   className?: string
   /** Rendered in the middle of the arc. */
   children?: React.ReactNode
-  /** Rendered at the bottom, between the 0 and max labels. */
+  /** Rendered beneath the arc and its endpoint labels. */
   footer?: React.ReactNode
 }) {
   const id = useChartId("gauge")
-  const sweep = 240
+  const sweep = 200
   const start = -sweep / 2
   const ratio = Math.min(Math.max(value / max, 0), 1)
   const [lx, ly] = polar(100, 100, 82, start)
@@ -117,22 +117,22 @@ export function Gauge({
             <stop offset="100%" stopColor="var(--chart-1)" />
           </linearGradient>
         </defs>
-        <path d={arc(100, 100, 82, start, start + sweep)} fill="none" stroke="var(--track)" strokeWidth={20} strokeLinecap="round" />
+        <path d={arc(100, 100, 82, start, start + sweep)} fill="none" stroke="var(--track)" strokeWidth={16} strokeLinecap="round" />
         <path
           d={arc(100, 100, 82, start, start + sweep * ratio)}
           fill="none"
           stroke={`url(#${id})`}
-          strokeWidth={20}
+          strokeWidth={16}
           strokeLinecap="round"
         />
-        <text x={lx} y={ly + 30} textAnchor="middle" fill="var(--muted-foreground)" fontSize={10} fontWeight={600}>
+        <text x={lx} y={ly + 24} textAnchor="middle" fill="var(--muted-foreground)" fontSize={10} fontWeight={600}>
           0
         </text>
-        <text x={rx} y={ry + 30} textAnchor="middle" fill="var(--muted-foreground)" fontSize={10} fontWeight={600}>
+        <text x={rx} y={ry + 24} textAnchor="middle" fill="var(--muted-foreground)" fontSize={10} fontWeight={600}>
           {formatCompact(max)}
         </text>
       </svg>
-      <div className="absolute inset-x-0 top-[40%] flex -translate-y-1/2 justify-center">{children}</div>
+      <div className="absolute inset-x-0 top-[57%] flex -translate-y-1/2 justify-center">{children}</div>
       {footer && <div className="absolute inset-x-0 bottom-0 flex justify-center">{footer}</div>}
     </div>
   )

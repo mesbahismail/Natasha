@@ -1,4 +1,5 @@
 import * as React from "react"
+import Image from "next/image"
 
 import { cn } from "@/lib/utils"
 import type { GarmentKind, GarmentPattern, Product, ProductArt } from "@/lib/natasha/data"
@@ -300,9 +301,11 @@ export function GarmentArt({ art, className }: { art: ProductArt; className?: st
 export function ProductImage({
   product,
   className,
+  sizes = "128px",
 }: {
   product: Pick<Product, "name" | "image" | "art">
   className?: string
+  sizes?: string
 }) {
   return (
     <span
@@ -312,8 +315,14 @@ export function ProductImage({
       )}
     >
       {product.image ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={product.image} alt={product.name} className="size-full object-cover" loading="lazy" />
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes={sizes}
+          className="object-cover"
+          unoptimized={!product.image.startsWith("/products/")}
+        />
       ) : (
         <GarmentArt art={product.art} />
       )}

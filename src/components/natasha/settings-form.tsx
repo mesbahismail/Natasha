@@ -1,13 +1,21 @@
 "use client"
 
 import * as React from "react"
-import { Save, Trash2 } from "lucide-react"
+import Link from "next/link"
+import { Archive, ChevronDown, CircleHelp, Pause, RotateCcw, Save, Trash2 } from "lucide-react"
 import { toast } from "sonner"
 
 import { currentUser } from "@/lib/natasha/data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { FieldLabel } from "@/components/natasha/kit"
@@ -19,6 +27,41 @@ const notifications = [
   { id: "messages", label: "Customer messages", description: "Someone writes to you in the inbox.", defaultChecked: true },
   { id: "payouts", label: "Payouts", description: "A payout is sent or needs attention.", defaultChecked: true },
   { id: "digest", label: "Weekly digest", description: "Earnings, traffic and conversions every Monday.", defaultChecked: false },
+]
+
+const dangerItems = [
+  {
+    id: "pause-store",
+    label: "Pause store",
+    description: "Stop accepting new orders while keeping your store data.",
+    action: "Pause store",
+    icon: Pause,
+    message: "Contact support to pause your store.",
+  },
+  {
+    id: "archive-products",
+    label: "Archive all products",
+    description: "Hide your catalog from customers and keep past orders.",
+    action: "Archive products",
+    icon: Archive,
+    message: "Contact support to archive all products.",
+  },
+  {
+    id: "reset-settings",
+    label: "Reset store settings",
+    description: "Restore your store preferences to their defaults.",
+    action: "Reset settings",
+    icon: RotateCcw,
+    message: "Contact support to reset your store settings.",
+  },
+  {
+    id: "close-store",
+    label: "Close store",
+    description: "Permanently remove products, orders and payout history.",
+    action: "Close store",
+    icon: Trash2,
+    message: "Contact support to close your store.",
+  },
 ]
 
 export function SettingsForm() {
@@ -132,19 +175,48 @@ export function SettingsForm() {
         <Card className="border-destructive-border/60">
           <CardHeader>
             <CardTitle>Danger zone</CardTitle>
-            <CardDescription>Closing your store removes products, orders and payouts history.</CardDescription>
+            <CardDescription>Manage actions that affect your store and its data.</CardDescription>
           </CardHeader>
-          <CardContent className="flex-1 justify-end">
-            <Button
-              type="button"
-              variant="destructive"
-              size="lg"
-              className="w-fit"
-              onClick={() => toast("Contact support to close your store")}
-            >
-              <Trash2 />
-              Close store
-            </Button>
+          <CardContent className="gap-0">
+            <ul>
+              {dangerItems.map((item) => (
+                <li
+                  key={item.id}
+                  className="flex items-start justify-between gap-4 border-b border-border py-4 first:pt-0 last:border-b-0 last:pb-0"
+                >
+                  <div className="flex min-w-0 flex-col gap-1">
+                    <span id={`${item.id}-label`} className="type-body-lg font-semibold">{item.label}</span>
+                    <span id={`${item.id}-description`} className="type-body text-muted-foreground">{item.description}</span>
+                  </div>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        type="button"
+                        variant="secondary"
+                        className="ml-auto"
+                        aria-label={`Actions for ${item.label.toLowerCase()}`}
+                        aria-describedby={`${item.id}-description`}
+                      >
+                        Actions
+                        <ChevronDown className="size-4 transition-transform in-aria-expanded:rotate-180" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-52">
+                      <DropdownMenuItem variant="destructive" onSelect={() => toast(item.message)}>
+                        <item.icon />
+                        {item.action}
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem asChild>
+                        <Link href="/dashboard/help">
+                          <CircleHelp /> Get help
+                        </Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </li>
+              ))}
+            </ul>
           </CardContent>
         </Card>
       </div>
