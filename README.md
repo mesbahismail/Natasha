@@ -1,5 +1,15 @@
 # Natasha — shadcn/ui dashboard template
 
+<!-- mesbah-lab-credit -->
+> **A Mesbah Lab freebie.** Designed and coded by us at [Mesbah Lab](https://mesbahlab.net).
+>
+> **More freebies:** [mesbahlab.net](https://mesbahlab.net)
+>
+> **Follow us:** [Instagram](https://www.instagram.com/themesbahlab/) · [X](https://x.com/mesbahlab) · [Facebook](https://www.facebook.com/profile.php?id=1421874334341579) · [Pinterest](https://www.pinterest.com/mesbahlab/) · [YouTube](https://www.youtube.com/channel/UCyPo3LFW1Xv8DkcEnRdB7Ug) · [Behance](https://www.behance.net/mesbahismail) · [GitHub](https://github.com/mesbahismail)
+>
+> **Enjoying this freebie?** [Support us with a donation on PayPal](https://paypal.me/mesbahlab). Your tip keeps designs free for everyone.
+<!-- /mesbah-lab-credit -->
+
 A free, dark e-commerce admin template built with [shadcn/ui](https://ui.shadcn.com), Next.js (App Router), Tailwind CSS v4, Recharts and [Lucide](https://lucide.dev) icons. It ships as a **shadcn registry**, so you can install the whole template into your own project with one command.
 
 **Pages:** Dashboard · Sales (list + detail) · Products (catalog, detail, new product form) · Insights (earnings, traffic, conversions) · Marketing · Payouts · Inbox · Extensions · Help center · Settings · Go premium
